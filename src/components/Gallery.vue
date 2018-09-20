@@ -44,11 +44,11 @@ export default {
         })
     .then(response => {
       for (let i = 0; i < this.results.length; i++) {  
-           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180919T172058Z.37bb7e906d492397.1d0b6f219c1e3ae0bf7677b9f2659664d6e7c3f8&text=' + this.results[i].data[0].title + '&lang=en-ru')
+           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[key]&text=' + this.results[i].data[0].title + '&lang=en-ru')
            .then(response => {
              this.results[i].data[0].title = response.data.text[0];
            });
-           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20180919T172058Z.37bb7e906d492397.1d0b6f219c1e3ae0bf7677b9f2659664d6e7c3f8&text=' + this.results[i].data[0].description + '&lang=en-ru')
+           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[key]&text=' + this.results[i].data[0].description + '&lang=en-ru')
            .then(response => {
              this.results[i].data[0].description = response.data.text[0];
            });

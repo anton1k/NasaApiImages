@@ -6,7 +6,7 @@
 			<span></span>
 			<span></span>
 		</div>
-		<a href="https://github.com/anton1k/NasaApiImages" target="_blank" style="text-align: left">Source</a>
+		<a href="https://github.com/anton1k/NasaApiImages" target="_blank" style="text-align: left" class="sourse">Source</a>
        <router-link v-for="(item, index) in items"
 					:key="index"
 					:to="item.url"
@@ -34,6 +34,10 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+.sourse {
+	position: absolute;
+	bottom: 0;
+}
 .menu-open {
 	left: 0;
 }

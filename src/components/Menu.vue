@@ -6,7 +6,7 @@
 			<span></span>
 			<span></span>
 		</div>
-		<a href="https://github.com/anton1k" target="_blank" style="text-align: left">Source</a>
+		<a href="https://github.com/anton1k/NasaApiImages" target="_blank" style="text-align: left">Source</a>
        <router-link v-for="(item, index) in items"
 					:key="index"
 					:to="item.url"

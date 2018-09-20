@@ -1,5 +1,6 @@
 <template>
     <div class="gallery-foto">
+        <div class="top-block"></div>
        <h2>{{results[count].data[0].title}} </h2>
        <div class="close"
             @click="onClose">
@@ -90,16 +91,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.block{
-    height: 100px;
-    width: 100px;
-    background: red;
+.top-block {
+  height: 70px;
+  width: 100%;
+  background: rgb(19, 17, 34);
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
-.block1{
-    height: 100px;
-    width: 100px;
-    background: green;
-}
+
 .prev, .next {
     position: absolute;
     background: rgb(19, 17, 34);
@@ -130,6 +130,7 @@ export default {
     padding-bottom: 100px;
     width: 100%;
     height: 100vh;
+    padding-top: 65px;
     top: 0;
     left: 0;
     & p {
@@ -153,6 +154,7 @@ export default {
         right: 10px;
         top: 30px;
         cursor: pointer;
+        z-index: 1000;
         & span {
             display: block;
             width: 30px;

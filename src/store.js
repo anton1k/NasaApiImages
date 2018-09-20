@@ -10,47 +10,47 @@ export default new Vuex.Store({
 	count: '',
     items: [
 			{
-				url: '/galaxies',
-				text: 'Галакики'
+				url: '/nasaimages/galaxies',
+				text: 'Галактики'
 			},
 			{
-				url: '/sun',
+				url: '/nasaimages/sun',
 				text: 'Солнце'
 			},
 			{
-				url: '/mercury',
+				url: '/nasaimages/mercury',
 				text: 'Меркурий'
 			},
 			{
-				url: '/venus',
+				url: '/nasaimages/venus',
 				text: 'Венера'
 			},
 			{
-				url: '/earth',
+				url: '/nasaimages/earth',
 				text: 'Земля'
 			},
 			{
-				url: '/mars',
+				url: '/nasaimages/mars',
 				text: 'Марс'
 			},
 			{
-				url: '/jupiter',
+				url: '/nasaimages/jupiter',
 				text: 'Юпитер'
 			},
 			{
-				url: '/saturn',
+				url: '/nasaimages/saturn',
 				text: 'Сатурн'
 			},
 			{
-				url: '/uranus',
+				url: '/nasaimages/uranus',
 				text: 'Уран'
 			},
 			{
-				url: '/neptune',
+				url: '/nasaimages/neptune',
 				text: 'Нептун'
 			},
 			{
-				url: '/pluto',
+				url: '/nasaimages/pluto',
 				text: 'Плутон'
 			}
 		]

@@ -18,7 +18,11 @@ export default {
 <style lang="scss">
 
 @import "./scss/bootstrap/scss/bootstrap-grid";
-
+@font-face {    
+    font-family: "Montserrat";
+    src : url("./font/Montserrat-Regular.ttf")
+}
+    
 *{
   box-sizing: border-box;
 }
@@ -29,7 +33,7 @@ html, body {
 }
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: left;

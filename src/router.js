@@ -13,6 +13,7 @@ import Neptune from './views/Neptune.vue'
 import Pluto from './views/Pluto.vue'
 import Galaxies from './views/Galaxies.vue'
 import Original from './views/Original.vue'
+import Home from './views/Home.vue'
 
 
 Vue.use(Router);
@@ -21,75 +22,75 @@ export default new Router({
   mode: 'history',
   routes: [
     {
+      path: '/nasaimages',
+      redirect: {name: 'home'}
+    },
+    {
       path: '/',
-      redirect: {name: 'galaxies'}
+      redirect: {name: 'home'}
     },
     {
-      path: '*',
-      redirect: {name: 'galaxies'}
+      path: '/nasaimages/home',
+      name: 'home',
+      component: Home
     },
     {
-      path: '/original',
+      path: '/nasaimages/original',
       name: 'original',
       component: Original
     },
     {
-      path: '/original/:id',
-      name: 'original',
-      component: Original
-    },
-    {
-      path: '/galaxies',
+      path: '/nasaimages/galaxies',
       name: 'galaxies',
       component: Galaxies
     },
     {
-      path: '/sun',
+      path: '/nasaimages/sun',
       name: 'sun',
       component: Sun
     },
     {
-      path: '/earth',
+      path: '/nasaimages/earth',
       name: 'earth',
       component: Earth
     },
     {
-      path: '/mercury',
+      path: '/nasaimages/mercury',
       name: 'mercury',
       component: Mercury
     },
     {
-      path: '/venus',
+      path: '/nasaimages/venus',
       name: 'venus',
       component: Venus
     },
     {
-      path: '/mars',
+      path: '/nasaimages/mars',
       name: 'mars',
       component: Mars
     },
     {
-      path: '/jupiter',
+      path: '/nasaimages/jupiter',
       name: 'jupiter',
       component: Jupiter
     },
     {
-      path: '/saturn',
+      path: '/nasaimages/saturn',
       name: 'saturn',
       component: Saturn
     },
     {
-      path: '/uranus',
+      path: '/nasaimages/uranus',
       name: 'uranus',
       component: Uranus
     },
     {
-      path: '/neptune',
+      path: '/nasaimages/neptune',
       name: 'neptune',
       component: Neptune
     },
     {
-      path: '/pluto',
+      path: '/nasaimages/pluto',
       name: 'pluto',
       component: Pluto
     }

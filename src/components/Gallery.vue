@@ -7,7 +7,7 @@
              :key="index"
              class="col">
              <div>
-            <router-link to="/original/">
+            <router-link to="/nasaimages/original">
               <img :src="result.links[0].href"
                   @click="onOpenOriginal(index)"/>
             </router-link>

@@ -39,16 +39,16 @@ export default {
     }
   },
   created(){
-    axios.get('https://images-api.nasa.gov/search?q=' + this.query + '&media_type=image').then( response => {
+    axios.get('https://images-api.nasa.gov/search?q=' + this.query + '&media_type=image&year_start=2013').then( response => {
             this.results = response.data.collection.items;
         })
     .then(response => {
       for (let i = 0; i < this.results.length; i++) {  
-           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[key]&text=' + this.results[i].data[0].title + '&lang=en-ru')
+           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[...]&text=' + this.results[i].data[0].title + '&lang=en-ru')
            .then(response => {
              this.results[i].data[0].title = response.data.text[0];
            });
-           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[key]&text=' + this.results[i].data[0].description + '&lang=en-ru')
+           axios.get('https://translate.yandex.net/api/v1.5/tr.json/translate?key=[...]&text=' + this.results[i].data[0].description + '&lang=en-ru')
            .then(response => {
              this.results[i].data[0].description = response.data.text[0];
            });
@@ -104,6 +104,8 @@ h2 {
   }
   & img {
     width: 300px;
+    height: 300px;
+    object-fit: cover;
     margin: 10px;
     transition: all .5s;
     cursor: pointer;
